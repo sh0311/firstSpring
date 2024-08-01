@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}"> <!-- th:each -> 루프 안을 도는것, $ -> 모델 안의 값을 꺼내는 것, 첫 번째 객체를꺼내서 member에 담는다-->
+                <td th:text="${member.id}"></td>  <!--//getid로 접근-->
+                <td th:text="${member.name}"></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
