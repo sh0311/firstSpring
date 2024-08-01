@@ -26,7 +26,7 @@ public class MemberService {
             //같은 이름이 있는 중복 회원 있으면 안된다
             validateDuplicateMember(member); //중복 회원 있는지 검증
             memberRepository.save(member);
-            return member.getId(); //회원가입 하면 id 반환해줌
+            return member.getId(); // 회원가입 하면 id 반환해줌
         }
 
     private void validateDuplicateMember(Member member) {
